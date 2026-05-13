@@ -10,8 +10,7 @@
     "start": "next start",
     "lint": "eslint",
     "typecheck": "node scripts/build-manifest.mjs && tsc --noEmit",
-    "build:manifest": "node scripts/build-manifest.mjs",
-    "sync:content": "node scripts/sync-content.mjs"
+    "build:manifest": "node scripts/build-manifest.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.105.3",
