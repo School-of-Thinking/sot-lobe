@@ -1,5 +1,5 @@
 import { after, type NextRequest } from 'next/server'
-import { redis } from '@/lib/redis'
+import { lookupAccessCode } from '@/lib/edge-config'
 import { getSupabaseAdmin } from '@/lib/supabase'
 import { MANIFEST_SKILL, MANIFEST_VERSION } from '@/lib/manifest.generated'
 
@@ -14,17 +14,17 @@ export async function GET(
 ) {
   const { access_code } = await params
 
-  // Format validation: cheap reject before touching Redis. Don't leak that
-  // the route exists at all for malformed input — return 404, not 400.
+  // Format validation: cheap reject before touching Edge Config. Don't leak
+  // that the route exists at all for malformed input — return 404, not 400.
   if (!ACCESS_CODE_PATTERN.test(access_code)) {
     return notFound()
   }
 
   let keyInfo: string | null
   try {
-    keyInfo = await redis.get<string>(`sot_key:${access_code}`)
+    keyInfo = await lookupAccessCode(access_code)
   } catch (err) {
-    console.error('[sot-lobe] redis lookup failed', err)
+    console.error('[sot-lobe] edge-config lookup failed', err)
     return new Response('Service Unavailable', { status: 503 })
   }
 
@@ -65,8 +65,8 @@ async function logAccess(
       access_code: accessCode,
       agent_info: agentInfo,
     }
-    // Redis value is the subscription UUID (when admin tooling sets it that
-    // way). If it's a UUID, store it as the FK; otherwise just log the code.
+    // Edge Config value is the subscription UUID when admin tooling sets it
+    // that way. If it's a UUID, store it as the FK; otherwise just log the code.
     if (keyInfo && isUuid(keyInfo)) {
       row.key_id = keyInfo
     }
