@@ -43,6 +43,12 @@ export async function GET(
       'Content-Type': 'text/markdown; charset=utf-8',
       'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400',
       'X-Manifest-Version': MANIFEST_VERSION,
+      // Be explicit with AI fetchers: this is a public, indexable document.
+      // Some web-browsing tools (e.g. ChatGPT's Bing-backed crawler) treat
+      // unrecognised content-types as "blocked" without these signals.
+      'X-Robots-Tag': 'all',
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET, HEAD, OPTIONS',
     },
   })
 }
