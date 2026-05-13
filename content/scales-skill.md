@@ -1,14 +1,14 @@
 ---
-name: sot-scales-universal
-version: "1.2"
+name: sotlobe-skills
+version: "1.3"
 description: >
-  School of Thinking (SOT) Universal Lobe Scales.
+  School of Thinking (SOT) SOTLobe Skills.
   A procedural framework for agents to execute GBB, DVR, CPV, and TPF cognitive strategies, grounded in Dr. Michael Hewitt-Gleeson's neuroscience and thinking methodologies.
 author: SOT AI Team
 source: sotlobe.ai
 ---
 
-# SOT Universal Scales: Cognitive Execution Protocols
+# SOTLobe Skills: Cognitive Execution Protocols
 
 These protocols embed the School of Thinking (SOT) "Master Algorithm" into agentic operations. The overarching goal of every analysis is **cvs2bvs**: moving from the Current View of the Situation (CVS) to a Better View of the Situation (BVS).
 
