@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Generated content (regenerated on predev/prebuild from content/sot-knowledge/)
+src/lib/manifest.generated.ts
+
+# Local content sync staging (transient .skill download)
+.content-staging/
