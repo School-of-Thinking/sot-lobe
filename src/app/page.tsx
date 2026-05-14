@@ -66,16 +66,19 @@ export default function Home() {
               color: NAVY,
             }}
           >
-            Upgrade your AI<br className="hidden sm:block" />
-            <span style={{ color: BLUE }}> with advanced thinking</span>.
+            Add another lobe to your brain.<br className="hidden sm:block" />
+            <span style={{ color: BLUE }}> Multiply your thinking by 10.</span>
           </h1>
 
           <p
             className="mt-6 sm:mt-8 mx-auto max-w-2xl text-base sm:text-xl"
             style={{ color: `${NAVY}99`, lineHeight: 1.55 }}
           >
-            SOTlobe is a procedural framework drawn from forty years of School of Thinking research —
-            delivered as a live-updated skill file your AI agent fetches in one line.
+            SOTlobe is an embedded Cognitive OS drawn from forty years of School of Thinking research.
+            It plugs directly into your existing AI to help you escape your{" "}
+            <strong style={{ color: NAVY, fontWeight: 700 }}>Current View (CVS)</strong>{" "}
+            and reach a{" "}
+            <strong style={{ color: NAVY, fontWeight: 700 }}>Better View (BVS)</strong>.
           </p>
 
           {/* CTA */}
@@ -113,28 +116,28 @@ export default function Home() {
               color: NAVY,
             }}
           >
-            One URL. One fetch. Smarter AI.
+            A Cognitive Multiplier, Not a Chatbot.
           </h2>
           <p
             className="text-center mx-auto max-w-2xl text-base sm:text-lg mb-14"
             style={{ color: `${NAVY}99` }}
           >
-            Drop the SOTlobe skill into any agent. Your AI gains structured cognitive protocols
-            in a single HTTP call.
+            Connect SOTlobe to your existing AI agents and instantly augment your thinking
+            with Dr. Michael Hewitt-Gleeson&apos;s proven neuroscience methodologies.
           </p>
 
           <div className="grid sm:grid-cols-3 gap-10 sm:gap-12">
             <Feature
-              title="Advanced thinking paradigm"
-              body="Four cognitive protocols — GBB, DVR, CPV, TPF — derived from Dr Michael Hewitt-Gleeson's neuroscience and SOT methodology."
+              title="The Master Protocols"
+              body="Equip your workflow with four foundational cognitive protocols — GBB, DVR, CPV, and TPF. Stop settling for 10% incremental improvements. Train your brain for x10 breakthroughs."
             />
             <Feature
-              title="Drop into any AI"
-              body="One HTTPS URL returns a markdown skill manifest. Works with ChatGPT, Claude, Copilot, Gemini, Kimi, and every agent framework that fetches text."
+              title="Plug and Think"
+              body="Just drop your private SOTlobe link into ChatGPT, Claude, Copilot, Gemini, or any standard agent. No complex integration. Your AI instantly gains structured SOT logic."
             />
             <Feature
-              title="Live updates for a full year"
-              body="New thinking tools and refinements ship to your subscriber URL automatically. No re-integration. No version bumps. The skill grows with you."
+              title="Always Evolving"
+              body="As SOT methodology advances, your SOTlobe evolves with it. New thinking tools and cognitive refinements stream directly to your agent for a full year."
             />
           </div>
         </div>
@@ -144,10 +147,10 @@ export default function Home() {
       <section
         className="w-full"
         style={{
-          background: `linear-gradient(180deg, ${PEACH} 0%, ${PEACH} 80%, ${FOOTER} 80%)`,
+          background: `linear-gradient(180deg, ${PEACH} 0%, ${PEACH} 88%, ${FOOTER} 88%)`,
         }}
       >
-        <div className="max-w-3xl mx-auto px-6 sm:px-10 py-20 sm:py-24 text-center">
+        <div className="max-w-3xl mx-auto px-6 sm:px-10 pt-20 pb-32 sm:pt-24 sm:pb-40 text-center">
           <h2
             className="font-bold mb-4"
             style={{
@@ -155,14 +158,14 @@ export default function Home() {
               color: NAVY,
             }}
           >
-            Ready to think x10?
+            Ready to become an x10 thinker?
           </h2>
           <p
             className="mb-10 text-lg mx-auto max-w-xl"
             style={{ color: `${NAVY}99`, lineHeight: 1.55 }}
           >
-            Email Michael with a short note about how you&apos;ll use SOTlobe — your subscriber URL
-            arrives within 24 hours.
+            Email Dr. Michael with a short note about how you will put your new cognitive lobe
+            to work. Your private access arrives within 24 hours.
           </p>
           <a
             href={mailtoHref}
@@ -187,8 +190,8 @@ export default function Home() {
               height={40}
               className="w-9 h-9 invert opacity-90"
             />
-            <span className="font-bold tracking-tight text-lg">
-              sotlobe<span style={{ color: BLUE }}>.ai</span>
+            <span className="font-bold tracking-tight text-lg text-white">
+              sotlobe.ai
             </span>
           </div>
           <p className="text-sm text-white/60 text-center sm:text-right">
